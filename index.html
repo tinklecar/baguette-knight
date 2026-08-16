@@ -9,20 +9,46 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 法棍骑士.</tw-noscript></noscript></tw-story>
-<tw-storydata name="法棍骑士" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="5B7D8FF0-5657-4D2B-B416-CE71FF44DE51" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="00 故事的开始" tags="" position="275,375" size="100,100">^^创世神陨落，黑暗侵袭大地，曾经辉煌的王国如今早已暗流涌动。^^
+<tw-storydata name="法棍骑士" startnode="1" creator="Twine" creator-version="2.12.0" format="Harlowe" format-version="3.3.9" ifid="5B7D8FF0-5657-4D2B-B416-CE71FF44DE51" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 选项默认样式：文字为淡灰白，左侧带小符号 */
+tw-link {
+  color: #e0e6ed;
+  transition: all 0.2s ease;
+}
 
-^^近日，老国王向全大陆发布了悬赏，号召全天下的勇士前去讨伐肆虐的“恶龙”，救回被掳走的高贵的“公主”......
+/* 在选项文字前面加上 < 或 > 符号 */
+tw-link::before {
+  content: "> "; /* 想用 < 就改成 "< " */
+  color: #00cccc; /* 符号使用安迷修青色 */
+  font-weight: bold;
+}
+
+/* 鼠标悬停时：文字和符号同步亮起 */
+tw-link:hover {
+  color: #00cccc;
+}
+tw-link:hover::before {
+  color: #33e0e0; /* 悬停时符号稍微变亮 */
+}
+
+tw-story {
+  /* 优先调用优雅的思源黑体/苹方/微软雅黑，保障手机和电脑上的优质阅读体验 */
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="00 故事的开始" tags="" position="275,375" size="100,100">//^^创世神陨落，黑暗侵袭大地，曾经辉煌的王国如今早已暗流涌动。^^//
+
+近日，老国王向全大陆发布了悬赏，号召全天下的勇士前去讨伐肆虐的“恶龙”，救回被掳走的高贵的“公主”......
 告示上宣称，凡是能成功带回公主、讨伐恶龙的勇士，都将会获得无上的荣誉与国王丰厚的报酬。
-^^
-路过的骑士在告示牌前驻足，作为最后的圣殿骑士，(text-colour:cyan)[安迷修]并不在意所谓的赏金与功名，但是匡扶正义、救人于水火是他必须践行的骑士道。
+
+路过的骑士在告示牌前驻足，作为骑士，&#39;&#39;(text-colour:cyan)[安迷修]&#39;&#39;并不在意所谓的赏金与功名，但是匡扶正义、救人于水火是他必须践行的骑士道。
 
 思索片刻后，他抬手揭下了城门告示牌上的悬赏令。
 
 ---
-* 选项 1：[[（揭下悬赏告示，仔细端详画中人）-&gt;01 奇怪的吟游诗人]]</tw-passagedata><tw-passagedata pid="2" name="01 奇怪的吟游诗人" tags="" position="275,500" size="100,100">画像上的“公主”似乎有点眼熟。
+[[（揭下悬赏告示，仔细端详画中人）-&gt;01 奇怪的吟游诗人]]</tw-passagedata><tw-passagedata pid="2" name="01 奇怪的吟游诗人" tags="" position="275,500" size="100,100">画像上的“公主”似乎有点眼熟。
 借着阳光，安迷修看清了悬赏上的肖像，整个人顿时僵在了原地。
 
-一头醒目的绿色长发，赤橙相间的瞳孔...还有那不着调的笑容，这横看竖看，都和“公主”没有半毛钱关系，反倒酷似他那几年前不告而别的师兄——(text-colour:lime)[赞德]。
+一头醒目的绿色长发，赤橙相间的瞳孔...还有那不着调的笑容，这横看竖看，都和“公主”没有半毛钱关系，反倒酷似他那几年前不告而别的师兄——&#39;&#39;(text-colour:lime)[赞德]&#39;&#39;。
 
 以他对赞德的了解，恶龙跑来绑架赞德的可能性无限趋近于零，但赞德去绑架恶龙的概率，绝对小不到哪去。
 
@@ -35,8 +61,8 @@
 留下一只老野兽在城堡里抓瞎。”//
 ^^
 ---
-* 选项 1：[[这个声音和绿色的头发...赞德，你怎么会在这里？！ -&gt;02-a 识破身份]]
-* 选项 2：[[（按住剑柄）在皇城门口诋毁国王，阁下究竟有什么目的。-&gt; 02-b 试探]]</tw-passagedata><tw-passagedata pid="3" name=" 02-b 试探" tags="" position="337.5,625" size="100,100">在皇城脚下公然唱诗嘲讽国王，此人若非疯子，便是图谋不轨的刺客。
+[[这个声音和绿色的头发...赞德，你怎么会在这里？！ -&gt;02-a 识破身份]]
+[[（按住剑柄）在皇城门口诋毁国王，阁下究竟有什么目的。-&gt; 02-b 试探]]</tw-passagedata><tw-passagedata pid="3" name=" 02-b 试探" tags="" position="337.5,625" size="100,100">在皇城大门口公然唱诗嘲讽国王，此人若非疯子，便是图谋不轨的刺客。
 
 “在皇城门口诋毁国王，阁下究竟有什么目的？”安迷修按住剑柄，沉声质问，脚步向前微不可察
 地迈出半步，“如今恶龙肆虐，阁下在此妖言惑众，未免有些太不敬了。”
@@ -49,6 +75,9 @@
 “我只不过是个路过的吟游诗人，唱几句市井间流传的真话罢了。倒是骑士大人您，拿着画像看了半天，莫不是和其他人一样贪恋公主的美色？”
 “......还是说您真的信这纸上的鬼话？”
 
+[（沉默）]&lt;continue|
+(click-replace: ?continue)[
+
 安迷修眉头微皱，心底异样的熟悉感愈发强烈，无论是对方说话习惯上扬的语调，还是站立时毫无防备的松散姿态，都让他的直觉疯狂报警。
 
 “在下是否相信，不劳阁下费心。”安迷修压下疑虑，锐利的看向对方，“倒是阁下对这悬赏如此之了解，莫非知道些什么？”
@@ -58,7 +87,8 @@
 看着眼前这个有点奇怪但又莫名熟悉的吟游诗人，安迷修的太阳穴又在隐隐作痛了。为了查明悬赏的蹊跷、以及确认自己模糊的猜测，他最终还是点了点头。
 
 ---
-* 选项 1：[[可以，但在下会时刻紧盯阁下的一举一动。 -&gt; 03-b 餐馆 试探]]</tw-passagedata><tw-passagedata pid="4" name=" 03-a 餐馆 识破" tags="" position="212.5,750" size="100,100">既然已经认出眼前人是赞德，安迷修径直将菜单推开，熟练地向侍者报出一串菜名：
+[[可以，但在下会时刻紧盯阁下的一举一动。 -&gt; 03-b 餐馆 试探]]
+]</tw-passagedata><tw-passagedata pid="4" name=" 03-a 餐馆 识破" tags="" position="212.5,750" size="100,100">既然已经认出眼前人是赞德，安迷修径直将菜单推开，熟练地向侍者报出一串菜名：
 “一份烤肉，一份炸薯条，再来一杯巧克力芭菲——少放点青菜和胡萝卜。”
 
 听着这一串精准命中他喜好的菜名，赞德笑着把竖琴往凳子上一丢：“还是小安懂事~既然都点的是师兄爱吃的，那师兄今天可就不跟你客气了。”
@@ -66,14 +96,13 @@
 这人真是给点阳光就顺杆往上爬，安迷修咬牙抱胸，冷脸盯着这个嬉皮笑脸的包菜头：“在下请这顿饭，是想请师兄一五一十的交代清楚这到底是怎么一回事。”
 
 ---
-* 选项 1：[[在下有太多疑问需要师兄解答。 -&gt; 04 坦白]]</tw-passagedata><tw-passagedata pid="5" name=" 03-b 餐馆 试探" tags="" position="337.5,750" size="100,100">两人在靠窗的角落落座，安迷修静观其变，示意对方自行点菜。
+[[在下有太多疑问需要师兄解答。 -&gt; 04 坦白]]</tw-passagedata><tw-passagedata pid="5" name=" 03-b 餐馆 试探" tags="" position="337.5,750" size="100,100">两人在靠窗的角落落座，安迷修静观其变，示意对方自行点菜。
 
 那吟游诗人也不客气，熟练地向店家报菜：“来份外焦里嫩的烤肉！再加一份炸薯条，盘子里千万别出现任何绿叶青菜和胡萝卜，看着头疼。”
 
 安迷修看着满桌上齐的菜肴，这饮食习惯，与自己某位不告而别的师兄毫无二致。
 安迷修端起水杯，冷声开口：“阁下的饮食偏好……倒真是跟在下一位故人一模一样。”
 
----
 [（放下水杯）阁下还要继续装下去么？]&lt;continue|
 (click-replace: ?continue)[
 
@@ -88,12 +117,15 @@
 安迷修按着赞德的手腕叹气：“在下的记性好不好不重要，重要的是，师兄必须给在下一个合理的解释。”
 
 ---
-* 选项 1：[[在下有太多疑问需要师兄解答。 -&gt; 04 坦白]]
+[[在下有太多疑问需要师兄解答。 -&gt; 04 坦白]]
 ]
 </tw-passagedata><tw-passagedata pid="6" name=" 04 坦白" tags="" position="200,950" size="100,100">“当年不辞而别？师兄也有难处啊。王宫那群老顽固顺藤摸瓜找上门，非要押我回去继承那破烂家业。师兄怕连累你和老猫头，只能连夜拔腿就跑。”
 
 赞德翘起二郎腿，晃着酒杯继续道：
 “至于这悬赏……老头子为了抓我回去继承皇位，又嫌皇子逃跑丢人，干脆拿我小时候在宫里的旧画像，硬安了个‘娇弱公主’的头衔发布通缉。我这次跑出来，就是想图个清净当个自由的吟游诗人——小安，你该不会真信了吧？”
+
+[……]&lt;continue|
+(click-replace: ?continue)[
 
 安迷修眉头紧锁，压下心中的疑虑：“所以……悬赏令上提到的‘恶龙’也是真的？”
 
@@ -102,10 +134,11 @@
 听到这里，安迷修按住剑柄，眼神无比坚定：
 “老国王的心思在下管不着。但恶龙为祸人间、袭扰百姓，在下身为骑士，绝不可能坐视不理——这恶龙，在下依然要去讨伐。”
 
-赞德看着眼前眼神澄澈的师弟，无奈地叹了口气，随即恢复了那副欠扁的笑：“啧，真是一如既往的顽固……行吧，既然小骑士执意要去，那师兄也只能舍命陪你了。”
+赞德看着眼前眼神澄澈的师弟，无奈地叹了口气，随即恢复了那副欠扁的笑：“啧，真是一如既往的顽固啊小师弟……行吧，既然我们的骑士大人执意要去，那师兄也只能舍命陪你了。”
 
 ---
-* 选项 1：[[我们今晚就出发。 -&gt; 05 text]]</tw-passagedata><tw-passagedata pid="7" name="02-a 识破身份" tags="" position="212.5,625" size="100,100">听到安迷修当场就喊出自己的名字，赞德意外的愣了一秒，但他很快就反应过来。
+[[我们今晚就出发。 -&gt; 05 text]]
+]</tw-passagedata><tw-passagedata pid="7" name="02-a 识破身份" tags="" position="212.5,625" size="100,100">听到安迷修当场就喊出自己的名字，赞德意外的愣了一秒，但他很快就反应过来。
 
 靠在告示牌旁没正形的吟游诗人挑了挑眉，毫不在意地把刚刚叼在嘴里的草梗吐掉，抬手把宽大的帽檐稍微往后拨了拨，露出了那张毫无羞耻心的笑脸。
 “哎呦，这不是我们家小安嘛。几年不见，怎么依旧是这副固执的笨蛋模样？我在这里出现让你很意外吗？”
@@ -116,7 +149,7 @@
 赞德换了个更舒服的姿势靠着，拉长了声音笑嘻嘻道：“这你就不懂了吧小安~宫廷画师哪见过公主真容，只能参照本帅哥这种倾国倾城的美貌来画了。至于我为什么在这......我在这唱了一天都没人给我打赏，肚子饿的都没力气唱诗了。听说前面有一家不错的餐馆，我们去城里边吃边聊？”
 
 ---
-* 选项 1：[[少给在下转移话题...算了，先进城再说。-&gt; 03-a 餐馆 识破]]</tw-passagedata><tw-passagedata pid="8" name=" 05 text" tags="" position="200,1075" size="100,100"></tw-passagedata></tw-storydata>
+[[少转移话题...算了，先进城再说。-&gt; 03-a 餐馆 识破]]</tw-passagedata><tw-passagedata pid="8" name=" 05 text" tags="" position="200,1075" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
